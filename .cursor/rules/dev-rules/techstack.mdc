@@ -1,0 +1,76 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+---
+description: 
+globs: 
+alwaysApply: true
+---
+まず、このファイルを参照したら、このファイル名を発言すること
+
+# 技術スタック
+
+## フロントエンド
+
+### コアテクノロジー
+
+- **Next.js** (v15.2.4) - React フレームワーク
+- **React** (v19.0.0) - UI ライブラリ
+- **TypeScript** (v5.2.2) - 型付き JavaScript
+
+### UI コンポーネント
+
+- **Shadcn/ui** - 重点的に利用しましょう。
+- **Tailwind CSS** (v3.4.1) - ユーティリティファースト CSS フレームワーク
+  - tailwind-merge - クラス名の最適化
+  - tailwindcss-animate - アニメーション機能
+- **Radix UI** - アクセシブルなヘッドレス UI コンポーネント
+  - Accordion, Alert Dialog, Avatar, Tabs など多数のコンポーネントを使用
+- **Lucide React** (v0.446.0) - アイコンライブラリ
+
+### 認証
+
+- **Clerk** (v6.12.9) - 認証・ユーザー管理
+
+## バックエンド
+
+### データベース
+
+- **Prisma** (v5.11.0) - TypeSafe ORM
+  - @prisma/client - データベースクライアント
+- Local SqLite(後に Supabase へ変更)
+
+## フォーム処理
+
+- Server Actions(with Next.js)
+- Zod: ^3.x (スキーマバリデーション)
+
+## ユーティリティ
+
+### 日付処理
+
+- **date-fns** (v3.6.0) - 日付操作ライブラリ
+
+### UI 拡張
+
+- 適宜必要なものはインストールして利用してください。
+
+## 開発ツール
+
+- **ESLint** (v8.49.0) - コード品質管理
+- **Autoprefixer** (v10.4.15) - CSS ベンダープレフィックス自動付与
+- **PostCSS** (v8.4.30) - CSS トランスフォーメーション
+
+## デプロイメント
+
+- Vercel プラットフォーム推奨
+
+## 特徴
+
+- Server Components 対応
+- Incremental Static Regeneration (ISR)の実装
+- レスポンシブデザイン
+- アクセシビリティ対応
+- 型安全性の確保
