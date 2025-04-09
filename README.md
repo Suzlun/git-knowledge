@@ -1,1 +1,3 @@
 # GitKnowLedge
+GitKnowLedgeは、Gitをインフラとして利用するナレッジベース構築フレームワークです。
+Git
