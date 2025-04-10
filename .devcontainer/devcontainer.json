@@ -1,0 +1,78 @@
+{
+	"name": "git_knowledge",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/workspace",
+	// コンテナに追加する機能
+	"features": {
+		// Zshのインストール
+		"ghcr.io/devcontainers/features/common-utils:2": {
+			"configureZshAsDefaultShell": true,
+			"installZsh": true,
+			"installOhMyZsh": true,
+			"upgradePackages": true,
+			"username": "node"
+		}
+	},
+	"customizations": {
+		"vscode": {
+			"settings": {
+				// 日本語化
+				"workbench.preferredLanguage": "ja",
+				// デフォルトのターミナルをbashに設定
+				"terminal.integrated.defaultProfile.linux": "bash",
+				// ファイル保存時にフォーマット処理を実行
+				"editor.formatOnSave": true,
+				// 各ファイルのデフォルトのフォーマッターを指定
+				"[javascript]": {
+					"editor.defaultFormatter": "esbenp.prettier-vscode"
+				},
+				"[javascriptreact]": {
+					"editor.defaultFormatter": "esbenp.prettier-vscode"
+				},
+				"[typescript]": {
+					"editor.defaultFormatter": "esbenp.prettier-vscode"
+				},
+				"[typescriptreact]": {
+					"editor.defaultFormatter": "esbenp.prettier-vscode"
+				},
+				"[json]": {
+					"editor.defaultFormatter": "esbenp.prettier-vscode"
+				},
+				"[postcss]": {
+					"editor.defaultFormatter": "esbenp.prettier-vscode"
+				},
+				"[css]": {
+					"editor.defaultFormatter": "esbenp.prettier-vscode"
+				},
+				// ESLintの対象を設定
+				"eslint.validate": [
+					"javascript",
+					"javascriptreact",
+					"typescript",
+					"typescriptreact"
+				],
+				// 保存時に実行されるコードアクションを有効に設定
+				"editor.codeActionsOnSave": {
+					"source.fixAll.eslint": true,
+					"source.organizeImports": false // ESLintによる自動インポート順序の整理を無効化
+				},
+				// VSCodeのデフォルトのフォーマッターを無効に
+				"javascript.format.enable": false,
+				"typescript.format.enable": false
+			},
+			// 拡張機能を追加
+			"extensions": [
+				"MS-CEINTL.vscode-language-pack-ja", // Visual Studio Codeの日本語言語パック
+				"ms-azuretools.vscode-docker", // Docker
+				"github.copilot", // GitHub Copilot
+				"dbaeumer.vscode-eslint", // ESLint
+				"esbenp.prettier-vscode", // Prettier
+				"formulahendry.auto-rename-tag", // Auto Rename Tag
+				"eamodio.gitlens", // GitLens
+				"bradlc.vscode-tailwindcss"	// Tailwind CSS IntelliSense
+			]
+		}
+	},
+	"postCreateCommand": "/bin/sh .devcontainer/setup.sh"
+}
