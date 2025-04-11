@@ -1,3 +1,4 @@
-# GitKnowLedge
-GitKnowLedgeは、Gitをインフラとして利用するナレッジベース構築フレームワークです。
-Git
+# Git KnowLedge
+Git KnowLedgeは、Gitをインフラとして利用するナレッジベース・テックブログ構築フレームワークです。
+Github PagesやCloudflare Pagesで自身のナレッジや作業ログをテックブログ共有することができます。
+また、corsorやGithubCopilotなどのエディタツールを使うことで、自動的に作業ログを作成したり、精度の高いトラブルシューティングを提案させることができます。

@@ -1,5 +1,5 @@
 {
-	"name": "git_knowledge",
+	"name": "git-knowledge",
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "app",
 	"workspaceFolder": "/workspace",

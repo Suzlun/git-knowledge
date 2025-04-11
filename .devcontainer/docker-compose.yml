@@ -22,7 +22,7 @@ services:
     volumes:
       # NOTE: default.conf のドキュメントルートと合わせておく
       - ./nginx:/etc/nginx/conf.d
-      - ../out:/var/www/git_knowledge
+      - ../out:/var/www/git-knowledge
     depends_on:
       - app
     networks:
