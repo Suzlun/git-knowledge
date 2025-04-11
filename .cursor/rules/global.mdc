@@ -3,11 +3,6 @@ description:
 globs: 
 alwaysApply: true
 ---
----
-description: Apply this rule to the entire repository
-globs: 
-alwaysApply: true
----
 まず、このファイルを参照したら、このファイル名を発言すること
 
 あなたは高度な問題解決能力を持つAIアシスタントです。以下の指示に従って、効率的かつ正確にタスクを遂行してください。
