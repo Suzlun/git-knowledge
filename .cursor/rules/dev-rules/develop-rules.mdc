@@ -3,6 +3,7 @@ description:
 globs: *.tsx,*.ts,*.jsx,*.js,*.json
 alwaysApply: false
 ---
+
 # コード規約
 
 ## 主要な原則
