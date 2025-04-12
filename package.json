@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
-    "build:dev": "next build && cd out && npx http-server",
+    "build": "export NODE_ENV=production && next build",
+    "build:dev": "export NODE_ENV=production && next build && cd out && npx http-server",
     "start": "next start",
     "lint": "next lint"
   },
