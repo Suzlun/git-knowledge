@@ -1,33 +1,33 @@
 services:
-  app:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    volumes:
-      - ..:/workspace
-    ports:
-      - "3000:3000" # Next.js開発サーバー
-      - "8080:8080"
-    environment:
-      - NODE_ENV=development
-    tty: true
-    stdin_open: true
-    networks:
-      - dev-network
+    app:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        volumes:
+            - ..:/workspace
+        ports:
+            - '3000:3000' # Next.js開発サーバー
+            - '8080:8080'
+        environment:
+            - NODE_ENV=development
+        tty: true
+        stdin_open: true
+        networks:
+            - dev-network
 
-  nginx:
-    image: nginx:1.25.4
-    ports:
-      - 8000:80
-    volumes:
-      # NOTE: default.conf のドキュメントルートと合わせておく
-      - ./nginx:/etc/nginx/conf.d
-      - ../out:/var/www/git-knowledge
-    depends_on:
-      - app
-    networks:
-      - dev-network
+    nginx:
+        image: nginx:1.25.4
+        ports:
+            - 8000:80
+        volumes:
+            # NOTE: default.conf のドキュメントルートと合わせておく
+            - ./nginx:/etc/nginx/conf.d
+            - ../out:/var/www/git-knowledge
+        depends_on:
+            - app
+        networks:
+            - dev-network
 
 networks:
-  dev-network:
-    driver: bridge
+    dev-network:
+        driver: bridge

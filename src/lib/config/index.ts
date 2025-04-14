@@ -1,47 +1,47 @@
-import { SiteConfig } from "../types/config";
-import defaultConfig from "@/../config/default.json";
+import { SiteConfig } from '../types/config';
+import defaultConfig from '@/../config/default.json';
 
 let siteConfig: SiteConfig = defaultConfig;
 
 // 設定をマージする関数
 export function mergeConfig(customConfig: Partial<SiteConfig>) {
-  siteConfig = {
-    ...defaultConfig,
-    ...customConfig,
-    header: {
-      ...defaultConfig.header,
-      ...customConfig.header,
-      menu: {
-        ...defaultConfig.header.menu,
-        ...customConfig.header?.menu,
-        items: [
-          ...(defaultConfig.header.menu.items || []),
-          ...(customConfig.header?.menu?.items || []),
-        ],
-      },
-    },
-    footer: {
-      ...defaultConfig.footer,
-      ...customConfig.footer,
-      links: [
-        ...(defaultConfig.footer?.links || []),
-        ...(customConfig.footer?.links || []),
-      ],
-    },
-  };
+    siteConfig = {
+        ...defaultConfig,
+        ...customConfig,
+        header: {
+            ...defaultConfig.header,
+            ...customConfig.header,
+            menu: {
+                ...defaultConfig.header.menu,
+                ...customConfig.header?.menu,
+                items: [
+                    ...(defaultConfig.header.menu.items || []),
+                    ...(customConfig.header?.menu?.items || []),
+                ],
+            },
+        },
+        footer: {
+            ...defaultConfig.footer,
+            ...customConfig.footer,
+            links: [
+                ...(defaultConfig.footer?.links || []),
+                ...(customConfig.footer?.links || []),
+            ],
+        },
+    };
 }
 
 // 設定を取得する関数
 export function getConfig(): SiteConfig {
-  return siteConfig;
+    return siteConfig;
 }
 
 // ヘッダー設定を取得する関数
 export function getHeaderConfig() {
-  return siteConfig.header;
+    return siteConfig.header;
 }
 
 // フッター設定を取得する関数
 export function getFooterConfig() {
-  return siteConfig.footer;
+    return siteConfig.footer;
 }
