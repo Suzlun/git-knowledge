@@ -1,0 +1,38 @@
+{
+  "header": {
+    "title": "git test",
+    "logo": {
+      "text": "Knowledge",
+      "fontFamily": "var(--font-montserrat-alternates)",
+      "fontSize": "2.25rem",
+      "fontWeight": "800"
+    },
+    "menu": {
+      "items": [
+        {
+          "label": "Github",
+          "href": "https://github.com"
+        }
+      ],
+      "mobile": {
+        "breakpoint": 1440,
+        "fontSize": "24px"
+      },
+      "desktop": {
+        "fontSize": "22px"
+      }
+    },
+    "theme": {
+      "light": {
+        "background": "#ffffff",
+        "text": "#1b1b1b",
+        "border": "#1b1b1b"
+      },
+      "dark": {
+        "background": "#1a1a1a",
+        "text": "#ffffff",
+        "border": "#ffffff"
+      }
+    }
+  }
+}
