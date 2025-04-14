@@ -14,3 +14,26 @@ export const DEFAULT_MENU_ITEMS: MenuItem[] = [
     href: "/profile",
   },
 ];
+
+export const FOOTER_MENU_ITEMS: MenuItem[] = [
+  {
+    label: "Home",
+    href: "/",
+  },
+  {
+    label: "Posts",
+    href: "/posts",
+  },
+  {
+    label: "Books",
+    href: "/books",
+  },
+  {
+    label: "Profile",
+    href: "/profile",
+  },
+  {
+    label: "About Git Knowledge",
+    href: "https://github.com/Suzlun/git-knowledge",
+  },
+];

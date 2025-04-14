@@ -20,6 +20,14 @@ export function mergeConfig(customConfig: Partial<SiteConfig>) {
         ],
       },
     },
+    footer: {
+      ...defaultConfig.footer,
+      ...customConfig.footer,
+      links: [
+        ...(defaultConfig.footer?.links || []),
+        ...(customConfig.footer?.links || []),
+      ],
+    },
   };
 }
 
@@ -31,4 +39,9 @@ export function getConfig(): SiteConfig {
 // ヘッダー設定を取得する関数
 export function getHeaderConfig() {
   return siteConfig.header;
+}
+
+// フッター設定を取得する関数
+export function getFooterConfig() {
+  return siteConfig.footer;
 }

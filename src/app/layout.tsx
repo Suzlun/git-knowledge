@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Montserrat, Montserrat_Alternates } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -44,7 +45,12 @@ export default function RootLayout({
         className={`${montserrat.variable} ${montserratAlternates.variable} ${geistSans.variable} ${geistMono.variable}`}
       >
         <Header />
-        <main style={{ paddingTop: "3.5rem" }}>{children}</main>
+        <main
+          style={{ paddingTop: "3.5rem", minHeight: "calc(100vh - 250px)" }}
+        >
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );

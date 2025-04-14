@@ -17,6 +17,12 @@ export interface MenuItem {
   href: string;
 }
 
+export interface FooterConfig {
+  copyright: string;
+  links: MenuItem[];
+}
+
 export interface SiteConfig {
   header: HeaderConfig;
+  footer: FooterConfig;
 }

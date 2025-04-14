@@ -34,5 +34,14 @@
         "border": "#ffffff"
       }
     }
+  },
+  "footer": {
+    "copyright": "© 2023-2024 Git Knowledge",
+    "links": [
+      {
+        "label": "Github",
+        "href": "https://github.com"
+      }
+    ]
   }
 }
