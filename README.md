@@ -18,8 +18,8 @@ Github Pages や Cloudflare Pages で自身のナレッジや作業ログをテ�
 1. このリポジトリをクローンします:
 
     ```bash
-    git clone <リポジトリURL>
-    cd <リポジトリ名>
+    git clone https://github.com/Suzlun/git-knowledge
+    cd git-knowledge
     ```
 
 2. DevContainer を使用して開発環境をセットアップします:
